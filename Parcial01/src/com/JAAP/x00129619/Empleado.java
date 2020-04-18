@@ -1,5 +1,6 @@
 package com.JAAP.x00129619;
 
+<<<<<<< HEAD
 public abstract class Empleado {
 
     protected String nombre;
@@ -36,5 +37,41 @@ public abstract class Empleado {
 
     public void setSalario(double salario) {
         this.salario = salario;
+=======
+import java.util.ArrayList;
+
+abstract class Empleado {
+    protected String Nombre, Puesto;
+    protected ArrayList<Documento> Documentos;
+    protected double Salario;
+
+    public Empleado(String nombre, String puesto, ArrayList<Documento> documentos, double salario) {
+        Nombre = nombre;
+        Puesto = puesto;
+        Documentos = documentos;
+        Salario = salario;
+    }
+    //Getters
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public String getPuesto() {
+        return Puesto;
+    }
+
+    public ArrayList<Documento> getDocumentos() {
+        return Documentos;
+    }
+
+    public double getSalario() {
+        return Salario;
+    }
+    // Set Salario
+
+    public void setSalario(double salario) {
+        Salario = salario;
+>>>>>>> 846422c4362ed75f8ad3d040c18fd5c297b7b283
     }
 }
