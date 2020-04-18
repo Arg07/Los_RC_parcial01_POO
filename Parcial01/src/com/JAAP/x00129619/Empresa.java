@@ -1,13 +1,13 @@
 package com.JAAP.x00129619;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Empresa {
 
     private String nombre;
-    private List<Empleado> planilla;
+    private ArrayList<Empleado> planilla;
 
-    public Empresa(String nombre, List<Empleado> planilla) {
+    public Empresa(String nombre, ArrayList<Empleado> planilla) {
         this.nombre = nombre;
         this.planilla = planilla;
     }
@@ -16,7 +16,7 @@ public class Empresa {
         return nombre;
     }
 
-    public List<Empleado> getPlanilla(){
+    public ArrayList<Empleado> getPlanilla(){
         return planilla;
     }
 
