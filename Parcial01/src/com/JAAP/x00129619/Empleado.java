@@ -42,4 +42,14 @@ public abstract class Empleado {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "nombre='" + nombre + '\'' +
+                ", puesto='" + puesto + '\'' +
+                ", documentos=" + documentos +
+                ", salario=" + salario +
+                '}';
+    }
 }

@@ -27,6 +27,6 @@ public class Empresa {
     public void quitEmpleado(String n){
         planilla.remove(n);
     }
-    
+
 }
 
