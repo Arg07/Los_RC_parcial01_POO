@@ -27,15 +27,18 @@ public class Empresa {
     public void quitEmpleado(String n){
 
         for(Empleado aux: planilla){
-
-            if ((aux.nombre.equals(n))) {
+            if ((aux.getNombre().equalsIgnoreCase(n))) {
                 planilla.remove(n);
             } else {
                 System.out.println("Empleado no encontrado");
             }
         }
-
     }
-
+    
+    @Override
+    public String toString() {
+        return " planilla=" + planilla +
+                '}';
+    }
 }
 

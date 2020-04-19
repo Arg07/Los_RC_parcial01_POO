@@ -84,6 +84,7 @@ public class Main {
                     empresa.quitEmpleado(nameDespedido);
                     break;
                 case 3:
+                    System.out.println(empresa.toString());
                     break;
                 case 4:
                     break;
@@ -103,6 +104,7 @@ public class Main {
         System.out.println("3) Ver lista de empleados.");
         System.out.println("4) Calcular sueldo.");
         System.out.println("5) Mostrar totales.");
+        System.out.println("0) Salir.");
         System.out.print("Opcion: ");
     }
 }

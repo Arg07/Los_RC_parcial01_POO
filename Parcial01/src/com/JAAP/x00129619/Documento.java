@@ -11,7 +11,6 @@ public class Documento {
     public String getNombre() {
         return Nombre;
     }
-
     public String getNumero() {
         return Numero;
     }
