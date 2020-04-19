@@ -76,9 +76,12 @@ public class Main {
                             System.out.println("Opcion Invalida");
                             break;
                     }
-
                     break;
                 case 2:
+                    System.out.println("-------Despdidiendo a un empleado-------");
+                    System.out.print("Igrese el nombre del empleado a despedir: ");
+                    String nameDespedido = sc.nextLine();
+                    empresa.quitEmpleado(nameDespedido);
                     break;
                 case 3:
                     break;

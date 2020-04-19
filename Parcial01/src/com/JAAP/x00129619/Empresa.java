@@ -25,7 +25,16 @@ public class Empresa {
     }
 
     public void quitEmpleado(String n){
-        planilla.remove(n);
+
+        for(Empleado aux: planilla){
+
+            if ((aux.nombre.equals(n))) {
+                planilla.remove(n);
+            } else {
+                System.out.println("Empleado no encontrado");
+            }
+        }
+
     }
     
 }
