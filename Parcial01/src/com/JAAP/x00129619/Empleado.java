@@ -45,11 +45,11 @@ public abstract class Empleado {
 
     @Override
     public String toString() {
-        return "Empleado{" +
-                "nombre='" + nombre + '\'' +
-                ", puesto='" + puesto + '\'' +
-                ", documentos=" + documentos +
+        return "    Empleado:" + '\n' +
+                "       nombre: " + nombre +
+                ", puesto: " + puesto +
+                ", documentos: " + documentos +
                 ", salario=" + salario +
-                '}';
+                '\n';
     }
 }

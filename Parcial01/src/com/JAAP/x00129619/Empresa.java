@@ -41,8 +41,7 @@ public class Empresa {
 
     @Override
     public String toString() {
-        return " planilla=" + planilla +
-                '}';
+        return "Planilla:" + '\n' + planilla;
     }
 }
 

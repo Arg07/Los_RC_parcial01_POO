@@ -12,12 +12,12 @@ public class Main {
         String nombre ="", puesto ="", documento ="", documentonum="";
         double salario;
         int extension, mesescontratos;
-        System.out.println("Ingrese el nombre de la empresa: ");
+        System.out.print("Ingrese el nombre de la empresa: ");
         String NombreEmpresa = sc.nextLine();
         Empresa empresa = new Empresa(NombreEmpresa);
 
         do{
-            MainMenu();
+            MainMenu(NombreEmpresa);
             Menuop =  sc.nextByte();sc.nextLine();
             switch (Menuop){
                 case 1:
@@ -25,20 +25,20 @@ public class Main {
                     System.out.println("Por favor seleccione el tipo de empleado que agregara");
                     System.out.println("1) Empleado de Servicio Profesional");
                     System.out.println("2) Empleado de Plaza Fija");
-                    System.out.println("Opcion: ");
+                    System.out.print("Opcion: ");
                     tipoEmpOP = sc.nextByte();sc.nextLine();
                     switch (tipoEmpOP){
                         case 1:
-                            System.out.println("Ingrese el Nombre: ");
+                            System.out.print("Ingrese el Nombre: ");
                             nombre = sc.nextLine();
-                            System.out.println("Ingrese el puesto de trabajo: ");
+                            System.out.print("Ingrese el puesto de trabajo: ");
                             puesto = sc.nextLine();
-                            System.out.println("Ingrese el salario: ");
+                            System.out.print("Ingrese el salario: ");
                             salario = sc.nextDouble();sc.nextLine();
-                            System.out.println("Meses de Contrato: ");
+                            System.out.print("Meses de Contrato: ");
                             mesescontratos = sc.nextInt();sc.nextLine();
                             ServicioProfesional empleado = new ServicioProfesional(nombre, puesto, salario, mesescontratos);
-                            System.out.println("Ingrese la cantidad de documentos a ingresar: ");
+                            System.out.print("Ingrese la cantidad de documentos a ingresar: ");
                             cantDocs = sc.nextByte(); sc.nextLine();
                             for(int i=0; i<cantDocs; i++){
                                 System.out.print("Ingrese el tipo de documento: ");
@@ -51,16 +51,16 @@ public class Main {
                             empresa.addEmpleado(empleado);
                             break;
                         case 2:
-                            System.out.println("Ingrese el Nombre: ");
+                            System.out.print("Ingrese el Nombre: ");
                             nombre = sc.nextLine();
-                            System.out.println("Ingrese el puesto de trabajo: ");
+                            System.out.print("Ingrese el puesto de trabajo: ");
                             puesto = sc.nextLine();
-                            System.out.println("Ingrese el salario: ");
+                            System.out.print("Ingrese el salario: ");
                             salario = sc.nextDouble();sc.nextLine();
-                            System.out.println("Extension de la oficina: ");
+                            System.out.print("Extension de la oficina: ");
                             extension = sc.nextInt();sc.nextLine();
                             PlazaFija empleadopf = new PlazaFija(nombre, puesto, salario, extension);
-                            System.out.println("Ingrese la cantidad de documentos a ingresar: ");
+                            System.out.print("Ingrese la cantidad de documentos a ingresar: ");
                             cantDocs = sc.nextByte(); sc.nextLine();
                             for(int i=0; i<cantDocs; i++){
                                 System.out.print("Ingrese el tipo de documento: ");
@@ -89,8 +89,20 @@ public class Main {
                     System.out.println(empresa.toString());
                     break;
                 case 4:
+                    System.out.println("----------Calculadora de sueldos----------");
+                    System.out.print("Ingrese el nombre del empleado: ");
+                    String nomCalc=sc.nextLine();
+                    for(Empleado aux : empresa.getPlanilla()) {
+                        if(aux.getNombre().equalsIgnoreCase(nomCalc)){
+                            System.out.print("El sueldo liquido es: ");
+                            System.out.print(CalculadoraImpuestos.calcularPago(aux));
+                            System.out.println(" dolares.");
+                        }
+                    }
                     break;
                 case 5:
+                    System.out.println("Los totales son: ");
+                    System.out.print(CalculadoraImpuestos.mostrarTotales());
                     break;
                 case 0:
                     break;
@@ -100,7 +112,9 @@ public class Main {
             }
         }while(Menuop != 0);
     }
-    static void MainMenu(){
+    static void MainMenu(String x){
+        System.out.println("");
+        System.out.println("----------" + x + "----------");
         System.out.println("1) Agregar Empleado.");
         System.out.println("2) Despedir Empleado.");
         System.out.println("3) Ver lista de empleados.");
