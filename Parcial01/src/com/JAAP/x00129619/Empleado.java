@@ -8,11 +8,11 @@ public abstract class Empleado {
     protected ArrayList<Documento> documentos;
     protected double salario;
 
-    public Empleado(String nombre, String puesto, ArrayList<Documento> documentos, double salario) {
+    public Empleado(String nombre, String puesto, double salario) {
         this.nombre = nombre;
         this.puesto = puesto;
-        this.documentos = documentos;
         this.salario = salario;
+        documentos = new ArrayList<>();
     }
 
     public String getNombre() {

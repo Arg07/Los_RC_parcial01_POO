@@ -7,9 +7,9 @@ public class Empresa {
     private String nombre;
     private ArrayList<Empleado> planilla;
 
-    public Empresa(String nombre, ArrayList<Empleado> planilla) {
+    public Empresa(String nombre) {
         this.nombre = nombre;
-        this.planilla = planilla;
+        planilla = new ArrayList<>();
     }
 
     public String getNombre(){
@@ -27,6 +27,6 @@ public class Empresa {
     public void quitEmpleado(String n){
         planilla.remove(n);
     }
-
+    
 }
 

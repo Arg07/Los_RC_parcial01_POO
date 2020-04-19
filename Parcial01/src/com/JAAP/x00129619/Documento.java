@@ -4,8 +4,8 @@ public class Documento {
     private String Nombre, Numero;
 
     public Documento(String nombre, String numero) {
-        Nombre = nombre;
-        Numero = numero;
+        this.Nombre = nombre;
+        this.Numero = numero;
     }
 
     public String getNombre() {
