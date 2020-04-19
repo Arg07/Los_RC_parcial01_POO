@@ -78,9 +78,11 @@ public class Main {
                     }
                     break;
                 case 2:
-                    System.out.println("-------Despdidiendo a un empleado-------");
-                    System.out.print("Igrese el nombre del empleado a despedir: ");
+                    System.out.println("-------Despididiendo a un empleado-------");
+                    System.out.print("Igrese el nombre del empleado:");
                     String nameDespedido = sc.nextLine();
+                    //System.out.print("Igrese el numero de c del empleado:");
+                    //String nameDespedido = sc.nextLine();
                     empresa.quitEmpleado(nameDespedido);
                     break;
                 case 3:
