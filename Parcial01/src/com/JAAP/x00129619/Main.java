@@ -184,9 +184,6 @@ public class Main {
             }
         }while(Menuop != 0);
     }
-    static void noletter() throws Exception{
-
-    }
     static void ConditionsString(String Campo) throws CustomException{
         if(Campo.equals(""))
             throw new CustomException("No puede dejar el campo vacio");
