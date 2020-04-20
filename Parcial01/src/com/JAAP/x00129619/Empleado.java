@@ -31,8 +31,8 @@ public abstract class Empleado {
         return salario;
     }
 
-    public void addDocumento(Documento d) {
-        documentos.add(d);
+    public void addDocumento(Documento d){
+            documentos.add(d);
     }
 
     public void removeDocumento(String d) {
