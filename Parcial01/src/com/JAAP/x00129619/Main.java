@@ -24,7 +24,7 @@ public class Main {
                 Menuop =  sc.nextByte();sc.nextLine();
             }catch (InputMismatchException e){
                 sc.nextLine();
-                System.out.println("ERROR!, Opcion invalida, su opcion debe ser un entero");
+                System.out.println("ERROR!, Opcion invalida, su opcion debe ser un entero sin espacios");
                 A = true;
             }
             }while (A);
@@ -46,7 +46,7 @@ public class Main {
                             sc.nextLine();
                         }catch (InputMismatchException e){
                             sc.nextLine();
-                            System.out.println("ERROR!, Opcion invalida, su opcion debe ser un entero");
+                            System.out.println("ERROR!, Opcion invalida, su opcion debe ser un entero sin espacios");
                             B = true;
                         }
 
@@ -92,7 +92,7 @@ public class Main {
                                 sc.nextLine();
                             }catch (InputMismatchException e){
                                 sc.nextLine();
-                                System.out.println("No debe ingresar letras");
+                                System.out.println("No debe ingresar letras ni espacios");
                             }
                             break;
                         case 2:
@@ -131,7 +131,7 @@ public class Main {
                                 sc.nextLine();
                             }catch (InputMismatchException e){
                                 sc.nextLine();
-                                System.out.println("No debe ingresar letras");
+                                System.out.println("No debe ingresar letras ni espacios");
                             }
                             break;
                         case 0:
